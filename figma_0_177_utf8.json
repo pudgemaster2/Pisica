@@ -1,0 +1,221 @@
+﻿{
+    "id":  "0:177",
+    "name":  "Hero-Description",
+    "type":  "FRAME",
+    "scrollBehavior":  "SCROLLS",
+    "children":  [
+                     {
+                         "id":  "0:178",
+                         "name":  "Р”РѕРїРѕРјРѕР¶Сѓ СЃС‚РІРѕСЂРёС‚Рё РІС–Р·СѓР°Р» РјСЂС–С—",
+                         "type":  "TEXT",
+                         "scrollBehavior":  "SCROLLS",
+                         "blendMode":  "PASS_THROUGH",
+                         "fills":  [
+                                       {
+                                           "blendMode":  "NORMAL",
+                                           "type":  "SOLID",
+                                           "color":  {
+                                                         "r":  0.9647058844566345,
+                                                         "g":  0.9450980424880981,
+                                                         "b":  0.9450980424880981,
+                                                         "a":  1
+                                                     }
+                                       }
+                                   ],
+                         "strokes":  [
+
+                                     ],
+                         "strokeWeight":  1,
+                         "strokeAlign":  "OUTSIDE",
+                         "absoluteBoundingBox":  {
+                                                     "x":  981,
+                                                     "y":  681,
+                                                     "width":  391,
+                                                     "height":  29
+                                                 },
+                         "absoluteRenderBounds":  {
+                                                      "x":  981.6936645507812,
+                                                      "y":  686.1920166015625,
+                                                      "width":  389.26336669921875,
+                                                      "height":  22.583984375
+                                                  },
+                         "constraints":  {
+                                             "vertical":  "TOP",
+                                             "horizontal":  "LEFT"
+                                         },
+                         "layoutAlign":  "STRETCH",
+                         "layoutGrow":  0,
+                         "layoutSizingHorizontal":  "FILL",
+                         "layoutSizingVertical":  "HUG",
+                         "characters":  "Р”РѕРїРѕРјРѕР¶Сѓ СЃС‚РІРѕСЂРёС‚Рё РІС–Р·СѓР°Р» РјСЂС–С—",
+                         "characterStyleOverrides":  [
+
+                                                     ],
+                         "styleOverrideTable":  {
+
+                                                },
+                         "lineTypes":  [
+                                           "NONE"
+                                       ],
+                         "lineIndentations":  [
+                                                  0
+                                              ],
+                         "style":  {
+                                       "fontFamily":  "Montserrat",
+                                       "fontPostScriptName":  "Montserrat-Regular",
+                                       "fontStyle":  "Regular",
+                                       "fontWeight":  400,
+                                       "textAutoResize":  "HEIGHT",
+                                       "fontSize":  24,
+                                       "textAlignHorizontal":  "CENTER",
+                                       "textAlignVertical":  "TOP",
+                                       "letterSpacing":  0,
+                                       "lineHeightPx":  29.256000518798828,
+                                       "lineHeightPercent":  100,
+                                       "lineHeightUnit":  "INTRINSIC_%"
+                                   },
+                         "layoutVersion":  5,
+                         "effects":  [
+
+                                     ],
+                         "interactions":  [
+
+                                          ],
+                         "complexStrokeProperties":  {
+                                                         "strokeType":  "BASIC"
+                                                     }
+                     },
+                     {
+                         "id":  "0:179",
+                         "name":  "РўРІРѕСЏ С–СЃС‚РѕСЂС–СЏ вЂ” РјС–Р№ РєР°РґСЂ",
+                         "type":  "TEXT",
+                         "scrollBehavior":  "SCROLLS",
+                         "blendMode":  "PASS_THROUGH",
+                         "fills":  [
+                                       {
+                                           "blendMode":  "NORMAL",
+                                           "type":  "SOLID",
+                                           "color":  {
+                                                         "r":  0.9647058844566345,
+                                                         "g":  0.9450980424880981,
+                                                         "b":  0.9450980424880981,
+                                                         "a":  1
+                                                     }
+                                       }
+                                   ],
+                         "strokes":  [
+
+                                     ],
+                         "strokeWeight":  1,
+                         "strokeAlign":  "OUTSIDE",
+                         "absoluteBoundingBox":  {
+                                                     "x":  981,
+                                                     "y":  722,
+                                                     "width":  391,
+                                                     "height":  29
+                                                 },
+                         "absoluteRenderBounds":  {
+                                                      "x":  1080.1156005859375,
+                                                      "y":  727.1920166015625,
+                                                      "width":  290.647216796875,
+                                                      "height":  22.4639892578125
+                                                  },
+                         "constraints":  {
+                                             "vertical":  "TOP",
+                                             "horizontal":  "LEFT"
+                                         },
+                         "layoutAlign":  "STRETCH",
+                         "layoutGrow":  0,
+                         "layoutSizingHorizontal":  "FILL",
+                         "layoutSizingVertical":  "HUG",
+                         "characters":  "РўРІРѕСЏ С–СЃС‚РѕСЂС–СЏ вЂ” РјС–Р№ РєР°РґСЂ",
+                         "characterStyleOverrides":  [
+
+                                                     ],
+                         "styleOverrideTable":  {
+
+                                                },
+                         "lineTypes":  [
+                                           "NONE"
+                                       ],
+                         "lineIndentations":  [
+                                                  0
+                                              ],
+                         "style":  {
+                                       "fontFamily":  "Montserrat",
+                                       "fontPostScriptName":  "Montserrat-Regular",
+                                       "fontStyle":  "Regular",
+                                       "fontWeight":  400,
+                                       "textAutoResize":  "HEIGHT",
+                                       "fontSize":  24,
+                                       "textAlignHorizontal":  "RIGHT",
+                                       "textAlignVertical":  "TOP",
+                                       "letterSpacing":  0,
+                                       "lineHeightPx":  29.256000518798828,
+                                       "lineHeightPercent":  100,
+                                       "lineHeightUnit":  "INTRINSIC_%"
+                                   },
+                         "layoutVersion":  5,
+                         "effects":  [
+
+                                     ],
+                         "interactions":  [
+
+                                          ],
+                         "complexStrokeProperties":  {
+                                                         "strokeType":  "BASIC"
+                                                     }
+                     }
+                 ],
+    "blendMode":  "PASS_THROUGH",
+    "clipsContent":  false,
+    "background":  [
+
+                   ],
+    "fills":  [
+
+              ],
+    "strokes":  [
+
+                ],
+    "strokeWeight":  1,
+    "strokeAlign":  "INSIDE",
+    "backgroundColor":  {
+                            "r":  0,
+                            "g":  0,
+                            "b":  0,
+                            "a":  0
+                        },
+    "layoutMode":  "VERTICAL",
+    "counterAxisSizingMode":  "FIXED",
+    "counterAxisAlignItems":  "MAX",
+    "itemSpacing":  12,
+    "layoutWrap":  "NO_WRAP",
+    "absoluteBoundingBox":  {
+                                "x":  981,
+                                "y":  681,
+                                "width":  391,
+                                "height":  70
+                            },
+    "absoluteRenderBounds":  {
+                                 "x":  981,
+                                 "y":  681,
+                                 "width":  391,
+                                 "height":  70
+                             },
+    "constraints":  {
+                        "vertical":  "TOP",
+                        "horizontal":  "LEFT"
+                    },
+    "layoutSizingHorizontal":  "FIXED",
+    "layoutSizingVertical":  "HUG",
+    "effects":  [
+
+                ],
+    "interactions":  [
+
+                     ],
+    "complexStrokeProperties":  {
+                                    "strokeType":  "BASIC"
+                                }
+}
