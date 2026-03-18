@@ -318,6 +318,16 @@ body {
     text-decoration: none;
 }
 
+/* Nav Links Hover Effect */
+.nav__link-portfolio, .nav__link-about, .nav__link-services, .nav__link-contacts {
+    transition: all 0.3s ease;
+}
+
+.nav__link-portfolio:hover, .nav__link-about:hover, .nav__link-services:hover, .nav__link-contacts:hover {
+    color: #F6F1F1;
+    text-shadow: 0 0 10px rgba(246, 241, 241, 0.5);
+}
+
 /* Icons-Wrapper */
 .socials {
     display: flex;
@@ -483,13 +493,7 @@ body {
     transition: filter 0.3s ease;
 }
 
-.about__phone-icon {
-    font-size: 18px;
-    line-height: 1;
-}
-
-.about__socials-link:hover img,
-.about__socials-link:hover .about__phone-icon {
+.about__socials-link:hover img {
     filter: brightness(0) saturate(100%) invert(98%) sepia(1%) saturate(526%) hue-rotate(334deg) brightness(112%) contrast(93%); /* Turns #F6F1F1 */
 }
 
@@ -872,12 +876,4 @@ body {
     width: 20px;
     height: 20px;
     filter: brightness(0) saturate(100%) invert(26%) sepia(20%) saturate(542%) hue-rotate(156deg) brightness(92%) contrast(92%);
-}
-
-.footer__icon--text {
-    font-size: 20px;
-    line-height: 1;
-    display: inline-block;
-    filter: none; /* remove filter for emoji */
-    color: #404B50;
 }
