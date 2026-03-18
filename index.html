@@ -18,15 +18,18 @@
     <main class="hero">
         <div class="hero__inner">
             <header class="header">
-                <a href="#" class="nav__link-portfolio">Портфоліо</a>
-                <a href="#" class="nav__link-about">Про мене</a>
-                <a href="#" class="nav__link-services">Послуги та ціни</a>
-                <a href="#" class="nav__link-contacts">Контакти</a>
+                <a href="#portfolio" class="nav__link-portfolio">Портфоліо</a>
+                <a href="#about" class="nav__link-about">Про мене</a>
+                <a href="#services" class="nav__link-services">Послуги та ціни</a>
+                <a href="#contacts" class="nav__link-contacts">Контакти</a>
 
                 <div class="socials">
-                    <a href="https://t.me/iryna9724" class="socials__link" style="order: 0;" target="_blank" rel="noopener noreferrer"><img src="icon-telegram.svg" alt="Telegram"></a>
-                    <a href="https://www.instagram.com/iriiphoto" class="socials__link" style="order: 1;" target="_blank" rel="noopener noreferrer"><img src="icon-instagram.svg" alt="Instagram"></a>
-                    <a href="https://viber.click/380968187217" class="socials__link" style="order: 2;" target="_blank" rel="noopener noreferrer"><img src="icon-viber.svg" alt="Viber"></a>
+                    <a href="https://t.me/iryna9724" class="socials__link" style="order: 0;" target="_blank"
+                        rel="noopener noreferrer"><img src="icon-telegram.svg" alt="Telegram"></a>
+                    <a href="https://www.instagram.com/iriiphoto" class="socials__link" style="order: 1;"
+                        target="_blank" rel="noopener noreferrer"><img src="icon-instagram.svg" alt="Instagram"></a>
+                    <a href="https://viber.click/380968187217" class="socials__link" style="order: 2;" target="_blank"
+                        rel="noopener noreferrer"><img src="icon-viber.svg" alt="Viber"></a>
                 </div>
             </header>
 
@@ -45,13 +48,13 @@
                 <div class="hero__author-last">Лісогор</div>
             </div>
 
-            <a href="#" class="hero__button-label">
+            <a href="#portfolio" class="hero__button-label">
                 <div class="hero__button-text">Портфоліо</div>
             </a>
         </div>
     </main>
 
-    <section class="about container">
+    <section id="about" class="about container">
         <h2 class="about__title">Про мене</h2>
         <div class="about__content-wrapper">
             <div class="about__image">
@@ -62,216 +65,490 @@
                 <div class="about__description">
                     <p>Створюю стильні портрети та романтичні історії з чистою композицією й делікатною ретушшю.</p>
                     <p>Моя мета — передати живі емоції та природне світло, ніжно підкресливши ваші найкращі риси.</p>
-                    <p>Перед зйомкою з турботою допомагаю підготувати образ і підказую, як почуватися легко та впевнено в кадрі, щоб результат тішив вас з першого погляду.</p>
+                    <p>Перед зйомкою з турботою допомагаю підготувати образ і підказую, як почуватися легко та впевнено
+                        в кадрі, щоб результат тішив вас з першого погляду.</p>
                     <p>Розумію, що для багатьох фотосесія — це хвилювання, тому працюю м’яко, делікатно й без тиску.</p>
                 </div>
-                
+
                 <div class="about__contact-block">
                     <h3 class="about__contact-title">ЗВ'ЯЗАТИСЯ ЗІ МНОЮ</h3>
                     <div class="about__socials">
-                        <a href="https://t.me/iryna9724" class="about__socials-link" target="_blank" rel="noopener noreferrer"><img src="icon-telegram.svg" alt="Telegram"></a>
-                        <a href="https://www.instagram.com/iriiphoto" class="about__socials-link" target="_blank" rel="noopener noreferrer"><img src="icon-instagram.svg" alt="Instagram"></a>
-                        <a href="https://viber.click/380968187217" class="about__socials-link" target="_blank" rel="noopener noreferrer"><img src="icon-viber.svg" alt="Viber"></a>
-                        <a href="tel:+380968187217" class="about__socials-link" title="Зателефонувати"><img src="icon-phone.svg" alt="Phone"></a>
+                        <a href="https://t.me/iryna9724" class="about__socials-link" target="_blank"
+                            rel="noopener noreferrer"><img src="icon-telegram.svg" alt="Telegram"></a>
+                        <a href="https://www.instagram.com/iriiphoto" class="about__socials-link" target="_blank"
+                            rel="noopener noreferrer"><img src="icon-instagram.svg" alt="Instagram"></a>
+                        <a href="https://viber.click/380968187217" class="about__socials-link" target="_blank"
+                            rel="noopener noreferrer"><img src="icon-viber.svg" alt="Viber"></a>
+                        <div class="about__phone-wrapper">
+                            <a href="tel:+380968187217" class="about__socials-link" id="about-phone-btn"
+                                title="Зателефонувати"><img src="icon-phone.svg" alt="Phone"></a>
+                            <span class="about__phone-number" id="about-phone-num">+380968187217</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    <section class="portfolio container">
-        
-        <!-- Block 1 -->
-        <div class="portfolio__block">
-            <h2 class="portfolio__title">Портфоліо</h2>
-            <div class="portfolio__grid">
-                <div class="portfolio__row">
-                    <div class="portfolio__img-wrap" style="width: 588px; height: 884px;"><img src="portfolio/0_143.jpg" alt="Portfolio 1"></div>
-                    <div class="portfolio__img-wrap" style="width: 588px; height: 884px;"><img src="portfolio/0_141.jpg" alt="Portfolio 2"></div>
+
+        <script>
+            document.getElementById('about-phone-btn').addEventListener('click', function (e) {
+                // Prevent opening dialer on large screens (desktop) to just show the text securely
+                if (window.innerWidth > 768) {
+                    e.preventDefault();
+                }
+                document.getElementById('about-phone-num').classList.toggle('show');
+            });
+        </script>
+        <section id="portfolio" class="portfolio container">
+
+            <!-- Block 1 -->
+            <div class="portfolio__block">
+                <h2 class="portfolio__title">Портфоліо</h2>
+                <div class="portfolio__grid">
+                    <div class="portfolio__row">
+                        <div class="portfolio__img-wrap" style="width: 588px; height: 884px;"><img
+                                src="portfolio/0_143.jpg" alt="Portfolio 1"></div>
+                        <div class="portfolio__img-wrap" style="width: 588px; height: 884px;"><img
+                                src="portfolio/0_141.jpg" alt="Portfolio 2"></div>
+                    </div>
+                    <div class="portfolio__row portfolio__row--mt84">
+                        <div class="portfolio__img-wrap" style="width: 365px; height: 598px;"><img
+                                src="portfolio/0_139.jpg" alt="Portfolio 3"></div>
+                        <div class="portfolio__img-wrap" style="width: 347px; height: 520px;"><img
+                                src="portfolio/0_137.jpg" alt="Portfolio 4"></div>
+                        <div class="portfolio__img-wrap" style="width: 365px; height: 487px;"><img
+                                src="portfolio/0_135.jpg" alt="Portfolio 5"></div>
+                    </div>
                 </div>
-                <div class="portfolio__row portfolio__row--mt84">
-                    <div class="portfolio__img-wrap" style="width: 365px; height: 598px;"><img src="portfolio/0_139.jpg" alt="Portfolio 3"></div>
-                    <div class="portfolio__img-wrap" style="width: 347px; height: 520px;"><img src="portfolio/0_137.jpg" alt="Portfolio 4"></div>
-                    <div class="portfolio__img-wrap" style="width: 365px; height: 487px;"><img src="portfolio/0_135.jpg" alt="Portfolio 5"></div>
+            </div>
+
+            <!-- Block 2 -->
+            <div class="portfolio__block">
+                <h2 class="portfolio__title portfolio__title--mb17">Фотографія</h2>
+                <p class="portfolio__intro">Фіксує вічність і водночас доводить, що все є лише короткою миттю в очах
+                    вічності.</p>
+                <div class="portfolio__grid">
+                    <div class="portfolio__row">
+                        <div class="portfolio__img-wrap" style="width: 364px; height: 598px;"><img
+                                src="portfolio/0_130.jpg" alt="Photography 1"></div>
+                        <div class="portfolio__img-wrap" style="width: 349px; height: 523px;"><img
+                                src="portfolio/0_128.jpg" alt="Photography 2"></div>
+                        <div class="portfolio__img-wrap" style="width: 364px; height: 487px;"><img
+                                src="portfolio/0_126.jpg" alt="Photography 3"></div>
+                    </div>
+                    <div class="portfolio__row portfolio__row--mt-4">
+                        <div class="portfolio__img-wrap" style="width: 509px; height: 764px; margin-top: 65px;"><img
+                                src="portfolio/0_124.jpg" alt="Photography 4"></div>
+                        <div class="portfolio__img-wrap" style="width: 610px; height: 884px;"><img
+                                src="portfolio/0_122.jpg" alt="Photography 5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Block 3 -->
+            <div class="portfolio__block">
+                <div class="portfolio__grid">
+                    <div class="portfolio__row">
+                        <div class="portfolio__img-wrap portfolio__img-wrap--fix-stripe"
+                            style="width: 415px; height: 598px;"><img src="portfolio/0_114.jpg" alt="Portfolio Set 1">
+                        </div>
+                        <div class="portfolio__img-wrap" style="width: 347px; height: 520px;"><img
+                                src="portfolio/0_116.jpg" alt="Portfolio Set 2"></div>
+                        <div class="portfolio__img-wrap" style="width: 365px; height: 447px;"><img
+                                src="portfolio/0_118.jpg" alt="Portfolio Set 3"></div>
+                    </div>
+                    <div class="portfolio__row portfolio__row--mt84">
+                        <div class="portfolio__img-wrap" style="width: 612px; height: 916px;"><img
+                                src="portfolio/0_112.jpg" alt="Portfolio Set 4"></div>
+                        <div class="portfolio__img-wrap" style="width: 520px; height: 713px;"><img
+                                src="portfolio/0_119.jpg" alt="Portfolio Set 5"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services container">
+            <h2 class="services__title">Послуги та ціни</h2>
+            <div class="services__grid">
+                <!-- Card 1 -->
+                <div class="services__card">
+                    <h3 class="services__card-title">ІНДИВІДУАЛЬНА</h3>
+                    <div class="services__card-divider"></div>
+                    <ul class="services__card-features">
+                        <li>Допомога з позуванням</li>
+                        <li>Підбір локації та референсів</li>
+                        <li>60 ретельно оброблених фото</li>
+                        <li>Відео бекстейджу за домовленістю</li>
+                    </ul>
+                    <div class="services__card-price">450 лей</div>
+                </div>
+                <!-- Card 2 -->
+                <div class="services__card">
+                    <h3 class="services__card-title">СІМЕЙНА</h3>
+                    <div class="services__card-divider"></div>
+                    <ul class="services__card-features">
+                        <li>Допомога з позуванням</li>
+                        <li>Підбір локації та референсів</li>
+                        <li>60 ретельно оброблених фото</li>
+                        <li>Відео бекстейджу за домовленістю</li>
+                    </ul>
+                    <div class="services__card-price">500 лей</div>
+                </div>
+                <!-- Card 3 -->
+                <div class="services__card">
+                    <h3 class="services__card-title">КОНТЕНТ</h3>
+                    <div class="services__card-divider"></div>
+                    <ul class="services__card-features">
+                        <li>Допомога з позуванням</li>
+                        <li>Підбір локації та референсів</li>
+                        <li>60 ретельно оброблених фото</li>
+                        <li>Відео бекстейджу за домовленістю</li>
+                    </ul>
+                    <div class="services__card-price">500 лей</div>
+                </div>
+                <!-- Card 4 -->
+                <div class="services__card">
+                    <h3 class="services__card-title">LOVE STORY</h3>
+                    <div class="services__card-divider"></div>
+                    <ul class="services__card-features">
+                        <li>Допомога з позуванням</li>
+                        <li>Підбір локації та референсів</li>
+                        <li>60 ретельно оброблених фото</li>
+                        <li>Відео бекстейджу за домовленістю</li>
+                    </ul>
+                    <div class="services__card-price">500 лей</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews container">
+            <h2 class="reviews__title">Відгуки</h2>
+            <div class="reviews__grid">
+                <!-- Review 1 -->
+                <div class="reviews__card">
+                    <p class="reviews__card-text">Дуже сподобалась атмосфера на зйомці<br>було легко, спокійно і без
+                        напруги.<br>Фото вийшли ніжні, живі та дуже красиві.</p>
+                    <div class="reviews__card-rating">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                fill="#F0D362" />
+                        </svg>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                fill="#F0D362" />
+                        </svg>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                fill="#F0D362" />
+                        </svg>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                fill="#F0D362" />
+                        </svg>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                fill="#F0D362" />
+                        </svg>
+                    </div>
+                    <div class="reviews__card-author">Анастасія Тарнаруцька</div>
+                </div>
+                <!-- Review 2 -->
+                <div class="reviews__card">
+                    <p class="reviews__card-text">Я хвилювалася перед зйомкою, але дарма.<br>Фотограф допомагала з
+                        позуванням і підтримувала.</p>
+                    <div class="reviews__card-rating">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                fill="#F0D362" />
+                        </svg>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                fill="#F0D362" />
+                        </svg>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                fill="#F0D362" />
+                        </svg>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                fill="#F0D362" />
+                        </svg>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                fill="#F0D362" />
+                        </svg>
+                    </div>
+                    <div class="reviews__card-author">Марина Нормальна</div>
+                </div>
+                <!-- Review 3 -->
+                <div class="reviews__card">
+                    <p class="reviews__card-text">Все було дуже професійно і водночас тепло.<br>Допомогли з ідеями,
+                        локацією та настроєм зйомки.</p>
+                    <div class="reviews__card-rating">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                fill="#F0D362" />
+                        </svg>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                fill="#F0D362" />
+                        </svg>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                fill="#F0D362" />
+                        </svg>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                fill="#F0D362" />
+                        </svg>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                fill="#F0D362" />
+                        </svg>
+                    </div>
+                    <div class="reviews__card-author">Ольга Пузiкiна</div>
+                </div>
+            </div>
+            <a href="#" class="reviews__button" id="open-review-modal">Додати відгук</a>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contacts" class="footer container">
+            <div class="footer__inner">
+                <div class="footer__column">
+                    <h3 class="footer__title">Послуги</h3>
+                    <ul class="footer__list">
+                        <li><a href="#services" class="footer__link">Індивідуальна фотосесія</a></li>
+                        <li><a href="#services" class="footer__link">Love Story фотосесія</a></li>
+                        <li><a href="#services" class="footer__link">Сімейна фотосесія</a></li>
+                        <li><a href="#services" class="footer__link">Контент-зйомка</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Контакти</h3>
+                    <ul class="footer__list footer__list--contacts">
+                        <li>
+                            <a href="https://t.me/iryna9724" class="footer__contact-link" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="icon-telegram.svg" alt="Telegram" class="footer__icon">
+                                <span>https://t.me/iryna9724</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/iriiphoto" class="footer__contact-link" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="icon-instagram.svg" alt="Instagram" class="footer__icon">
+                                <span>https://www.instagram.com/iriiphoto</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://viber.click/380968187217" class="footer__contact-link" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="icon-viber.svg" alt="Viber" class="footer__icon">
+                                <span>https://viber.click/380968187217</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+380968187217" class="footer__contact-link">
+                                <img src="icon-phone.svg" alt="Phone" class="footer__icon">
+                                <span>+380968187217</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Review Modal -->
+        <div class="modal-overlay" id="review-modal">
+            <div class="modal-content">
+                <button class="modal-close" id="modal-close">&times;</button>
+                <h3 class="modal-title">Написати відгук</h3>
+                <form id="review-form" class="review-form">
+                    <div class="form-group">
+                        <label for="review-name">Ваше ім'я та прізвище</label>
+                        <input type="text" id="review-name" required placeholder="Наприклад: Анна Шевченко">
+                    </div>
+                    <div class="form-group">
+                        <label>Оцінка</label>
+                        <div class="star-rating" id="star-rating">
+                            <svg data-value="1" width="24" height="24" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                    fill="#D8D8D8" />
+                            </svg>
+                            <svg data-value="2" width="24" height="24" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                    fill="#D8D8D8" />
+                            </svg>
+                            <svg data-value="3" width="24" height="24" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                    fill="#D8D8D8" />
+                            </svg>
+                            <svg data-value="4" width="24" height="24" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                    fill="#D8D8D8" />
+                            </svg>
+                            <svg data-value="5" width="24" height="24" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                                    fill="#D8D8D8" />
+                            </svg>
+                        </div>
+                        <input type="hidden" id="review-rating" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-text">Ваш відгук</label>
+                        <textarea id="review-text" rows="4" required
+                            placeholder="Напишіть свої враження від зйомки..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Відправити відгук</button>
+                </form>
+                <div class="modal-success" id="modal-success" style="display: none;">
+                    <h4>Дякуємо за ваш відгук! 🎉</h4>
+                    <p>Ваші теплі слова дуже важливі. Відгук з'явиться на сайті після перевірки.</p>
+                    <button class="submit-btn" id="modal-success-close" style="margin-top: 24px;">Закрити</button>
                 </div>
             </div>
         </div>
 
-        <!-- Block 2 -->
-        <div class="portfolio__block">
-            <h2 class="portfolio__title portfolio__title--mb17">Фотографія</h2>
-            <p class="portfolio__intro">Фіксує вічність і водночас доводить, що все є лише короткою миттю в очах вічності.</p>
-            <div class="portfolio__grid">
-                <div class="portfolio__row">
-                    <div class="portfolio__img-wrap" style="width: 364px; height: 598px;"><img src="portfolio/0_130.jpg" alt="Photography 1"></div>
-                    <div class="portfolio__img-wrap" style="width: 349px; height: 523px;"><img src="portfolio/0_128.jpg" alt="Photography 2"></div>
-                    <div class="portfolio__img-wrap" style="width: 364px; height: 487px;"><img src="portfolio/0_126.jpg" alt="Photography 3"></div>
-                </div>
-                <div class="portfolio__row portfolio__row--mt-4">
-                    <div class="portfolio__img-wrap" style="width: 509px; height: 764px; margin-top: 65px;"><img src="portfolio/0_124.jpg" alt="Photography 4"></div>
-                    <div class="portfolio__img-wrap" style="width: 610px; height: 884px;"><img src="portfolio/0_122.jpg" alt="Photography 5"></div>
-                </div>
-            </div>
-        </div>
+        <script>
+            // Modal Logic
+            const modal = document.getElementById('review-modal');
+            const openBtn = document.getElementById('open-review-modal');
+            const closeBtns = [document.getElementById('modal-close'), document.getElementById('modal-success-close')];
+            const form = document.getElementById('review-form');
+            const successMsg = document.getElementById('modal-success');
 
-        <!-- Block 3 -->
-        <div class="portfolio__block">
-            <div class="portfolio__grid">
-                <div class="portfolio__row">
-                    <div class="portfolio__img-wrap portfolio__img-wrap--fix-stripe" style="width: 415px; height: 598px;"><img src="portfolio/0_114.jpg" alt="Portfolio Set 1"></div>
-                    <div class="portfolio__img-wrap" style="width: 347px; height: 520px;"><img src="portfolio/0_116.jpg" alt="Portfolio Set 2"></div>
-                    <div class="portfolio__img-wrap" style="width: 365px; height: 447px;"><img src="portfolio/0_118.jpg" alt="Portfolio Set 3"></div>
-                </div>
-                <div class="portfolio__row portfolio__row--mt84">
-                    <div class="portfolio__img-wrap" style="width: 612px; height: 916px;"><img src="portfolio/0_112.jpg" alt="Portfolio Set 4"></div>
-                    <div class="portfolio__img-wrap" style="width: 520px; height: 713px;"><img src="portfolio/0_119.jpg" alt="Portfolio Set 5"></div>
-                </div>
-            </div>
-        </div>
+            // Stars Logic
+            const stars = document.querySelectorAll('#star-rating svg');
+            const ratingInput = document.getElementById('review-rating');
+            let currentRating = 0;
 
-    </section>
+            openBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden'; // prevent background scrolling
+            });
 
-    <!-- Services Section -->
-    <section class="services container">
-        <h2 class="services__title">Послуги та ціни</h2>
-        <div class="services__grid">
-            <!-- Card 1 -->
-            <div class="services__card">
-                <h3 class="services__card-title">ІНДИВІДУАЛЬНА</h3>
-                <div class="services__card-divider"></div>
-                <ul class="services__card-features">
-                    <li>Допомога з позуванням</li>
-                    <li>Підбір локації та референсів</li>
-                    <li>60 ретельно оброблених фото</li>
-                    <li>Відео бекстейджу  за домовленістю</li>
-                </ul>
-                <div class="services__card-price">450 лей</div>
-            </div>
-            <!-- Card 2 -->
-            <div class="services__card">
-                <h3 class="services__card-title">СІМЕЙНА</h3>
-                <div class="services__card-divider"></div>
-                <ul class="services__card-features">
-                    <li>Допомога з позуванням</li>
-                    <li>Підбір локації та референсів</li>
-                    <li>60 ретельно оброблених фото</li>
-                    <li>Відео бекстейджу  за домовленістю</li>
-                </ul>
-                <div class="services__card-price">450 лей</div>
-            </div>
-            <!-- Card 3 -->
-            <div class="services__card">
-                <h3 class="services__card-title">КОНТЕНТ</h3>
-                <div class="services__card-divider"></div>
-                <ul class="services__card-features">
-                    <li>Допомога з позуванням</li>
-                    <li>Підбір локації та референсів</li>
-                    <li>60 ретельно оброблених фото</li>
-                    <li>Відео бекстейджу  за домовленістю</li>
-                </ul>
-                <div class="services__card-price">450 лей</div>
-            </div>
-            <!-- Card 4 -->
-            <div class="services__card">
-                <h3 class="services__card-title">LOVE STORY</h3>
-                <div class="services__card-divider"></div>
-                <ul class="services__card-features">
-                    <li>Допомога з позуванням</li>
-                    <li>Підбір локації та референсів</li>
-                    <li>60 ретельно оброблених фото</li>
-                    <li>Відео бекстейджу  за домовленістю</li>
-                </ul>
-                <div class="services__card-price">500 лей</div>
-            </div>
-        </div>
-    </section>
+            const closeModal = () => {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+                // Reset form after closing
+                setTimeout(() => {
+                    form.reset();
+                    form.style.display = 'flex';
+                    successMsg.style.display = 'none';
+                    updateStars(0);
+                    currentRating = 0;
+                }, 300);
+            };
 
-    <!-- Reviews Section -->
-    <section class="reviews container">
-        <h2 class="reviews__title">Відгуки</h2>
-        <div class="reviews__grid">
-            <!-- Review 1 -->
-            <div class="reviews__card">
-                <p class="reviews__card-text">Дуже сподобалась атмосфера на зйомці<br>було легко, спокійно і без напруги.<br>Фото вийшли ніжні, живі та дуже красиві.</p>
-                <div class="reviews__card-rating">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F0D362"/></svg>
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F0D362"/></svg>
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F0D362"/></svg>
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F0D362"/></svg>
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F0D362"/></svg>
-                </div>
-                <div class="reviews__card-author">Анастасія Тарнаруцька</div>
-            </div>
-            <!-- Review 2 -->
-            <div class="reviews__card">
-                <p class="reviews__card-text">Я хвилювалася перед зйомкою, але дарма.<br>Фотограф допомагала з позуванням і підтримувала.</p>
-                <div class="reviews__card-rating">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F0D362"/></svg>
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F0D362"/></svg>
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F0D362"/></svg>
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F0D362"/></svg>
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F0D362"/></svg>
-                </div>
-                <div class="reviews__card-author">Марина Нормальна</div>
-            </div>
-            <!-- Review 3 -->
-            <div class="reviews__card">
-                <p class="reviews__card-text">Все було дуже професійно і водночас тепло.<br>Допомогли з ідеями, локацією та настроєм зйомки.</p>
-                <div class="reviews__card-rating">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F0D362"/></svg>
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F0D362"/></svg>
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F0D362"/></svg>
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F0D362"/></svg>
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F0D362"/></svg>
-                </div>
-                <div class="reviews__card-author">Ольга Пузiкiна</div>
-            </div>
-        </div>
-        <a href="#" class="reviews__button">Додати відгук</a>
-    </section>
+            closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
 
-    <!-- Footer -->
-    <footer class="footer container">
-        <div class="footer__inner">
-            <div class="footer__column">
-                <h3 class="footer__title">Послуги</h3>
-                <ul class="footer__list">
-                    <li><a href="#" class="footer__link">Індивідуальна фотосесія</a></li>
-                    <li><a href="#" class="footer__link">Love Story фотосесія</a></li>
-                    <li><a href="#" class="footer__link">Сімейна фотосесія</a></li>
-                    <li><a href="#" class="footer__link">Контент-зйомка</a></li>
-                </ul>
-            </div>
-            <div class="footer__column">
-                <h3 class="footer__title">Контакти</h3>
-                <ul class="footer__list footer__list--contacts">
-                    <li>
-                        <a href="https://t.me/iryna9724" class="footer__contact-link" target="_blank" rel="noopener noreferrer">
-                            <img src="icon-telegram.svg" alt="Telegram" class="footer__icon">
-                            <span>https://t.me/iryna9724</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/iriiphoto" class="footer__contact-link" target="_blank" rel="noopener noreferrer">
-                            <img src="icon-instagram.svg" alt="Instagram" class="footer__icon">
-                            <span>https://www.instagram.com/iriiphoto</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://viber.click/380968187217" class="footer__contact-link" target="_blank" rel="noopener noreferrer">
-                            <img src="icon-viber.svg" alt="Viber" class="footer__icon">
-                            <span>https://viber.click/380968187217</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:+380968187217" class="footer__contact-link">
-                            <img src="icon-phone.svg" alt="Phone" class="footer__icon">
-                            <span>+380968187217</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+            // Close when clicking outside modal content
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
 
+            // Hover & Click on Stars
+            const updateStars = (hoveredIndex) => {
+                stars.forEach((star, index) => {
+                    const fillPath = star.querySelector('path');
+                    if (index < hoveredIndex) {
+                        fillPath.setAttribute('fill', '#F0D362');
+                    } else {
+                        fillPath.setAttribute('fill', '#D8D8D8');
+                    }
+                });
+            };
+
+            stars.forEach((star, index) => {
+                star.addEventListener('mouseover', () => updateStars(index + 1));
+                star.addEventListener('mouseout', () => updateStars(currentRating));
+                star.addEventListener('click', () => {
+                    currentRating = index + 1;
+                    ratingInput.value = currentRating;
+                    updateStars(currentRating);
+                });
+            });
+
+            // Submit form
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                if (!ratingInput.value) {
+                    alert("Будь ласка, поставте оцінку зірочками.");
+                    return;
+                }
+
+                const name = document.getElementById('review-name').value;
+                const text = document.getElementById('review-text').value;
+                const rating = ratingInput.value;
+
+                // ==========================================
+                // TELEGRAM BOT SETTINGS
+                // ==========================================
+                const botToken = '8726539944:AAFUxRzIZyW_WMzn-1ft5HswgpXfZqB1jlE';
+                const chatId = '361237176'; // Для @Nastasyasea
+
+                const message = `📩 <b>Новий відгук!</b>\n👤 <b>Від:</b> ${name}\n⭐ <b>Оцінка:</b> ${rating}/5\n\n💬 <b>Текст:</b>\n${text}`;
+
+                const submitBtn = form.querySelector('.submit-btn');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Відправка...';
+                submitBtn.disabled = true;
+
+                try {
+                    // Відправляємо запит до Telegram API
+                    const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            chat_id: chatId,
+                            text: message,
+                            parse_mode: 'HTML'
+                        })
+                    });
+
+                    if (response.ok) {
+                        form.style.display = 'none';
+                        successMsg.style.display = 'flex';
+                    } else {
+                        alert('Помилка сервера Telegram. Перевірте токен та Chat ID.');
+                    }
+                } catch (error) {
+                    alert('Сталася мережева помилка. Перевірте підключення до інтернету.');
+                } finally {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }
+            });
+        </script>
 </body>
 
 </html>

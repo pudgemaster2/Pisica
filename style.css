@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #D8D8D8;
 }
@@ -360,12 +364,25 @@ body {
     border-radius: 100px;
     flex: none;
     flex-grow: 0;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.socials__link:hover {
+    background: #404B50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(4, 17, 23, 0.15);
 }
 
 .socials__link img {
     width: 16px;
     height: 16px;
     filter: brightness(0) saturate(100%) invert(26%) sepia(20%) saturate(542%) hue-rotate(156deg) brightness(92%) contrast(92%);
+    transition: filter 0.3s ease;
+}
+
+.socials__link:hover img {
+    filter: brightness(0) saturate(100%) invert(98%) sepia(1%) saturate(526%) hue-rotate(334deg) brightness(112%) contrast(93%);
 }
 
 /* =========================================
@@ -465,6 +482,30 @@ body {
     flex-direction: row;
     gap: 22px;
     align-items: center;
+}
+
+.about__phone-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.about__phone-number {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #404B50;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.about__phone-number.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
 }
 
 .about__socials-link {
@@ -832,6 +873,171 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+/* =========================================
+   Modal Styling
+   ========================================= */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(4, 17, 23, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: #FAFAFA;
+    border-radius: 24px;
+    padding: 48px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    transform: translateY(20px) scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #404B50;
+    box-shadow: 0 10px 40px rgba(4, 17, 23, 0.1);
+}
+
+.modal-overlay.show .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    line-height: 1;
+    color: #404B50;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: #041117;
+}
+
+.modal-title {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    text-align: center;
+    color: #041117;
+    margin-bottom: 32px;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #404B50;
+}
+
+.form-group input,
+.form-group textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 16px;
+    border: 1px solid #D8D8D8;
+    border-radius: 12px;
+    background: #FFFFFF;
+    color: #041117;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #404B50;
+}
+
+.star-rating {
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.star-rating svg {
+    transition: transform 0.2s ease;
+}
+
+.star-rating svg:hover {
+    transform: scale(1.1);
+}
+
+.submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 48px;
+    background: #041117;
+    color: #FAFAFA;
+    border: 1px solid #041117;
+    border-radius: 24px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.submit-btn:hover {
+    background: transparent;
+    color: #041117;
+}
+
+.modal-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.modal-success h4 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #041117;
+}
+
+.modal-success p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #404B50;
 }
 
 .footer__link {
